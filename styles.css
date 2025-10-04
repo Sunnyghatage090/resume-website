@@ -1,0 +1,1292 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: -60px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 100%;   /* stays within this limit on big screens */
+  width: 100%;         /* shrinks to fit smaller screens */
+  margin: 0 auto;      /* centers content */
+  overflow-x: hidden;  /* hides accidental overflow */
+}
+
+/* Header Styles - Exact Figma Specifications */
+.header {
+    /* Frame 33 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    
+    background: #FFFFFF;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.header-container {
+    /* Frame 32 */
+    box-sizing: border-box;
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px;
+    gap: 70px;
+    
+    width: 100%;
+    height: 100px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Logo Group */
+.logo-group {
+    /* Group */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+    width: auto;
+    height: 58px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.logo-icon-group {
+    /* Group 155 */
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Logo text image (inline with logo image) */
+.logo-text {
+    height: 48px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Remove .logo-text-group if not needed for image-only logo text */
+.logo-text-group {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.company-text {
+    /* COMPANY text */
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+}
+
+.tagline-text {
+    /* business tagline text */
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: capitalize;
+    color: #000000;
+    margin: 0;
+}
+
+/* Navigation */
+.navigation {
+    /* Frame 251 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    
+    margin: 0 auto;
+    width: 519px;
+    height: 42px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.nav-item {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 4px;
+    
+    height: 42px;
+    
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.nav-item:nth-child(1) { width: 70px; }
+.nav-item:nth-child(2) { width: 96px; }
+.nav-item:nth-child(3) { width: 124px; }
+.nav-item:nth-child(4) { width: 76px; }
+.nav-item:nth-child(5) { width: 57px; }
+
+.nav-text {
+    /* Navigation text */
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-transform: capitalize;
+    
+    color: #282828;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-text:hover {
+    color: #FA1239;
+}
+
+/* CTA Button */
+.cta-container {
+    /* Frame 31 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    
+    margin: 0 auto;
+    width: 147px;
+    height: 46px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.cta-button {
+    /* Buttons */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 22px;
+    gap: 10px;
+    
+    width: 147px;
+    height: 46px;
+    
+    /* ColorPallet/Primary/primary-500 */
+    background: #FA1239;
+    /* ButtonShadow */
+    box-shadow: 0px 0px 12px rgba(250, 18, 57, 0.58);
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.cta-button:hover {
+    background: #e01134;
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 16px rgba(250, 18, 57, 0.7);
+}
+
+.button-text {
+    /* Contact */
+    width: 103px;
+    height: 22px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-transform: capitalize;
+    
+    color: #FFFFFF;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Hero Section - Figma Specifications */
+.hero {
+    /* HeroSection2 */
+    width: 100%;
+    height: 909px;
+    
+    background: linear-gradient(261.18deg, #FFE7EB -0.46%, #FFBFCA 100.67%);
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+    
+    position: relative;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+.hero-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ellipse-6 {
+    /* Ellipse 6 */
+    position: absolute;
+    width: 633.87px;
+    height: 633.88px;
+    left: 766px;
+    top: 283.49px;
+    
+    background: radial-gradient(55.26% 55.26% at 50% 44.74%, #FFE4E9 0%, #FFCBD4 100%);
+    border-radius: 50%;
+}
+
+.ellipse-5 {
+    /* Ellipse 5 */
+    position: absolute;
+    width: 476.45px;
+    height: 476.45px;
+    left: 845.23px;
+    top: 361.68px;
+    
+    background: radial-gradient(50.11% 50.11% at 50.11% 49.89%, #FECDD5 0%, #FFE2E7 100%);
+    border-radius: 50%;
+}
+
+.women-bg {
+    /* Women-bg.png */
+    position: absolute;
+    width: 506px;
+    height: 727px;
+    left: 811px;
+    top: 190px;
+    
+    background: url('images/Women-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;   /* keeps it from getting too wide on large screens */
+    width: 100%;         /* lets it shrink to fit smaller screens */
+    margin: 0 auto;      /* centers it */
+    height: 100%;
+}
+
+/* Hero Text Frame */
+.hero-text-frame {
+    /* Frame 249 */
+    position: absolute;
+    width: 620px;
+    height: 510px;
+    left: 100px;
+    top: 228px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 38px;
+    isolation: isolate;
+}
+
+.hero-heading {
+    /* Your Resume Deserves a yes let's make it happen */
+    width: 620px;
+    height: 252px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    /* or 122% */
+    text-transform: capitalize;
+    
+    /* ColorPallet/Neutral/neutral-500 */
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+    
+    margin: 0;
+}
+
+.highlighted-text {
+    color: #fc283d;
+}
+
+.hero-description {
+    /* If your resume isn't getting responses... */
+    width: 485px;
+    height: 136px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 34px;
+    /* or 212% */
+    text-transform: capitalize;
+    
+    /* ColorPallet/Neutral/neutral-500 */
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 1;
+    
+    margin: 0;
+}
+
+.hero-buttons-frame {
+    /* Frame 32 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    
+    width: 383px;
+    height: 46px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    z-index: 2;
+}
+
+.btn-outline {
+    /* Buttons - Outline */
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    width: 202px;
+    height: 46px;
+    
+    background: #FFFFFF;
+    /* ColorPallet/Primary/primary-500 */
+    border: 1px solid #FA1239;
+    /* ButtonShadow */
+    box-shadow: 0px 0px 12px rgba(250, 18, 57, 0.58);
+    border-radius: 30px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    
+    /* ColorPallet/Primary/primary-500 */
+    color: #FA1239;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.btn-outline:hover {
+    background: #FA1239;
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    /* Buttons - Primary */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 22px;
+    gap: 10px;
+    
+    width: 157px;
+    height: 46px;
+    
+    /* ColorPallet/Primary/primary-500 */
+    background: #FA1239;
+    /* ButtonShadow */
+    box-shadow: 0px 0px 12px rgba(250, 18, 57, 0.58);
+    border-radius: 30px;
+    border: none;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.btn-primary:hover {
+    background: #e01134;
+    transform: translateY(-2px);
+}
+
+/* Decorative Vector */
+.decorative-vector {
+    /* Group 4 */
+    position: absolute;
+    width: 363px;
+    height: 17px;
+    left: 0px;
+    top: 153.25px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    z-index: 3;
+}
+
+.vector-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Overlay Cards */
+.overlay-card {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.79);
+    backdrop-filter: blur(45.5px);
+    border-radius: 10px;
+}
+
+.instructor-rating {
+    /* Frame 239 - Instructor Rating */
+    padding: 20px 15px;
+    width: 350px;
+    height: 117px;
+    left: 729px;
+    top: 585px;
+}
+
+.rating-number {
+    /* 4.9 */
+    width: 101px;
+    height: 77px;
+    
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    text-transform: capitalize;
+    
+    color: #1CB098;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.rating-content {
+    /* Frame 248 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 11px;
+    
+    width: 199px;
+    height: 56.35px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.stars-frame {
+    /* Frame 247 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    
+    width: 101.61px;
+    height: 16.35px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.star {
+    /* Vector */
+    width: 17.12px;
+    height: 16.35px;
+    
+    background: #FFAB00;
+    
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.rating-text {
+    /* Instructor Rating */
+    width: 199px;
+    height: 29px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: capitalize;
+    
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.resume-count {
+    /* Frame 239 - Resume Count */
+    padding: 30px;
+    width: 270.66px;
+    height: 133.43px;
+    left: 1129px;
+    top: 734px;
+}
+
+.count-icon {
+    /* Mask group */
+    width: 80px;
+    height: 80px;
+    position: relative;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.mortarboard-bg {
+    /* Rectangle 16 */
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 23.33px;
+    top: 26.71px;
+    
+    background: #FC4E6A;
+}
+
+.mortarboard-icon {
+    /* Mortarboard */
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 23.33px;
+    top: 26.71px;
+    
+    background: url('.png');
+}
+
+.count-content {
+    /* Frame 238 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 124px;
+    height: 76px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.count-number {
+    /* 260+ */
+    width: 124px;
+    height: 36px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: capitalize;
+    
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.count-text {
+    /* Online Resume Created */
+    width: 124px;
+    height: 40px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: capitalize;
+    
+    color: #666666;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Features Section - Figma Specifications */
+.features {
+    /* Frame 559 */
+    width: 100%;
+    height: 708px;
+    
+    background: #FFFFFF;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    
+    position: relative;
+}
+
+.features-background {
+    /* Group 13 */
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    left: -1px;
+    top: 100px;
+}
+
+.features-content {
+    /* Frame 567 */
+    position: absolute;
+    width: 1255px;
+    height: 599px;
+    left: 100px;
+    top: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+}
+
+.features-header {
+    /* Frame 557 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 26px;
+    
+    width: 1240px;
+    height: 99px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.features-header-content {
+    /* Frame 546 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    
+    width: 1240px;
+    height: 42px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.features-label-frame {
+    /* Frame 558 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    
+    width: 154px;
+    height: 42px;
+    
+    background: rgba(253, 146, 164, 0.3);
+    border-radius: 6px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.features-label {
+    /* What you Get */
+    width: 114px;
+    height: 22px;
+    
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.features-title-frame {
+    /* Frame 554 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    
+    width: 1240px;
+    height: 31px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.features-title {
+    /* You're not just another applicant and your resume shouldn't look like one */
+    width: 1240px;
+    height: 31px;
+    
+    /* Typography/H4-26-Semibold */
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    
+    color: #000000;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    
+    margin: 0;
+}
+
+.features-grid {
+    /* Frame 551 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 1255px;
+    height: 450px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Feature Card Layout - Figma Exact Specs */
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 24px;
+    width: 298.75px;
+    height: 450px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.feature-illustration {
+    /* Frame 296 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 18px;
+    
+    width: 258.75px;
+    height: 200px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.cms-illustration {
+    /* CMS */
+    width: 300px;
+    height: 200px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.feature-content {
+    max-width: 258.75px;
+    width: 100%;
+    word-break: break-word;
+    hyphens: auto;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.feature-title-frame-single {
+    /* Frame 570 */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    
+    width: 258.75px;
+    height: 48px;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.feature-title {
+    max-width: 258.75px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000;
+    margin-bottom: 8px;
+    margin-top: 0;
+    word-break: break-word;
+    hyphens: auto;
+    display: flex;
+    align-items: center;
+}
+
+.feature-description {
+    max-width: 258.75px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000;
+    margin-bottom: 0;
+    margin-top: 0;
+    word-break: break-word;
+    hyphens: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 100%) {
+    .header {
+        min-width: 100%;
+    }
+    
+    .header-container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 50px;
+        gap: 40px;
+    }
+    
+    .logo-group {
+        left: 0;
+        position: relative;
+        width: 200px;
+    }
+    
+    .logo-icon-group {
+        left: 0;
+        top: 0;
+        position: relative;
+    }
+    
+    .logo-text-group {
+        left: 60px;
+        top: 0;
+        position: relative;
+    }
+    
+    .navigation {
+        gap: 20px;
+        width: auto;
+    }
+    
+    .nav-item:nth-child(1) { width: 60px; }
+    .nav-item:nth-child(2) { width: 80px; }
+    .nav-item:nth-child(3) { width: 100px; }
+    .nav-item:nth-child(4) { width: 60px; }
+    .nav-item:nth-child(5) { width: 50px; }
+}
+
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-heading {
+        font-size: 40px;
+    }
+    
+    .section-heading {
+        font-size: 32px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .header {
+        height: auto;
+        min-width: 100%;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .logo-group {
+        width: 180px;
+    }
+    
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: auto !important;
+        padding: 5px 10px;
+    }
+    
+    .nav-text {
+        font-size: 16px;
+    }
+    
+    .hero {
+        padding: 60px 0 80px;
+    }
+    
+    .hero-heading {
+        font-size: 32px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn-outline,
+    .btn-primary {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .overlay-card {
+        position: static;
+        margin: 20px auto;
+        min-width: auto;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .instructor-rating,
+    .resume-count {
+        position: static;
+        margin: 20px auto;
+    }
+    
+    .section-heading {
+        font-size: 28px;
+    }
+    
+    .features {
+        padding: 60px 0;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .feature-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-text {
+        font-size: 20px;
+    }
+    
+    .tagline-text {
+        font-size: 10px;
+    }
+    
+    .navigation {
+        gap: 10px;
+    }
+    
+    .nav-text {
+        font-size: 14px;
+    }
+    
+    .cta-button {
+        width: 120px;
+        height: 40px;
+        padding: 10px 18px;
+    }
+    
+    .button-text {
+        font-size: 16px;
+        width: 80px;
+    }
+    
+    .hero-heading {
+        font-size: 28px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+    
+    .section-heading {
+        font-size: 24px;
+    }
+    
+    .feature-title {
+        font-size: 18px;
+    }
+    
+    .feature-description {
+        font-size: 13px;
+    }
+}
+
+/* Animation and Transitions */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #ff4757;
+    outline-offset: 2px;
+}
