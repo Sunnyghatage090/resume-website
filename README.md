@@ -56,12 +56,4 @@ Simply open `index.html` in a web browser to view the landing page.
 ```
 ├── index.html          # Main HTML structure
 ├── styles.css          # Complete CSS styling
-└── README.md          # Project documentation
-```
-
-## Responsive Breakpoints
-
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: Below 768px
-- **Small Mobile**: Below 480px
+└── README.md          # Project documentation
